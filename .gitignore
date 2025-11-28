@@ -1,0 +1,23 @@
+IntelliJ Project Files
+
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+Gradle Files
+
+.gradle/
+build/
+gradle/
+gradlew
+gradlew.bat
+
+IntelliJ Platform Cache (Added per log warning)
+
+.intellijPlatform/
+
+Mac System Files
+
+.DS_Store

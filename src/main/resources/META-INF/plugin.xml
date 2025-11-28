@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>de.tum.exam.mode</id>
+    <name>TUM Exam Mode</name>
+    <vendor email="support@in.tum.de" url="https://in.tum.de">TUM School of CIT</vendor>
+
+    <description><![CDATA[
+    <h3>TUM Exam Integrity Plugin</h3>
+    <p>Enforces exam regulations for Technical University of Munich programming exams.</p>
+    <p>Automatically disables:</p>
+    <ul>
+        <li>AI Assistants (Copilot, JetBrains AI, TabNine, Amazon Q, etc.)</li>
+        <li>Full Line Code Completion (Grey ghost text)</li>
+        <li>Inline AI Suggestions</li>
+    </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="de.tum.exam.ExamModeStartupActivity"/>
+    </extensions>
+</idea-plugin>
