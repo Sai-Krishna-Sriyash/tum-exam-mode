@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+    <defs>
+        <!-- Background Card Gradient -->
+        <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
+        </linearGradient>
+
+        <!-- TUM Blue Gradient for Lock Body -->
+        <linearGradient id="tumBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#3070b3;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0065BD;stop-opacity:1" />
+        </linearGradient>
+
+        <!-- Neon Glow Effect -->
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="0.6" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- 1. The "Editor" Background -->
+    <rect x="4" y="4" width="32" height="32" rx="4"
+          fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- 2. "Ghost Code" Lines (Being Locked Away) -->
+    <path d="M10 12 h15 M10 16 h20 M10 20 h12 M10 24 h18"
+          stroke="#475569" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- 3. The Futuristic Lock Shackle -->
+    <path d="M14 18 V13 a6 6 0 0 1 12 0 V18"
+          fill="none" stroke="#00e5ff" stroke-width="2.5" stroke-linecap="round"
+          filter="url(#glow)"/>
+
+    <!-- 4. The Lock Body (TUM Branded) -->
+    <path d="M12 18 h16 v14 a2 2 0 0 1 -2 2 h-12 a2 2 0 0 1 -2 -2 Z"
+          fill="url(#tumBlue)" stroke="#fff" stroke-width="1"/>
+
+    <!-- 5. "TUM" Letters on the Lock -->
+    <g fill="white">
+        <!-- T -->
+        <path d="M13 22 h4 v1 h-1.5 v5 h-1 v-5 h-1.5 Z"/>
+        <!-- U -->
+        <path d="M18 22 v4.5 a1.5 1.5 0 0 0 3 0 v-4.5 h-1 v4.5 a0.5 0.5 0 0 1 -1 0 v-4.5 Z"/>
+        <!-- M -->
+        <path d="M22 22 v6 h1 v-3.5 l1.5 2 l1.5 -2 v3.5 h1 v-6 h-1 l-1.5 2 l-1.5 -2 Z"/>
+    </g>
+
+    <!-- 6. Red "Status: Locked" LED Indicator -->
+    <circle cx="32" cy="8" r="2" fill="#ef4444" filter="url(#glow)"/>
+
+</svg>

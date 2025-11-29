@@ -1,19 +1,25 @@
 <idea-plugin>
     <id>de.tum.exam.mode</id>
     <name>TUM Exam Mode</name>
-    <vendor email="support@in.tum.de" url="https://in.tum.de">TUM School of CIT</vendor>
+    <vendor email="your.email@tum.de" url="https://github.com/Sai-Krishna-Sriyash">Sriyash Kommalapati</vendor>
 
     <description><![CDATA[
-    <h3>TUM Exam Integrity Plugin</h3>
-    <p>Enforces exam regulations for Technical University of Munich programming exams.</p>
-    <p>Automatically disables:</p>
+    <h3>Unofficial TUM Exam Integrity Plugin</h3>
+    <p><strong>Developed by Sriyash Kommalapati.</strong></p>
+    <br>
+    <p>Enforces strict exam regulations by automatically disabling 25+ known AI tools:</p>
     <ul>
-        <li>AI Assistants (Copilot, JetBrains AI, TabNine, Amazon Q, etc.)</li>
-        <li>Full Line Code Completion (Grey ghost text)</li>
-        <li>Inline AI Suggestions</li>
+        <li><strong>JetBrains AI:</strong> Full Line Code Completion, AI Assistant, Junie, Turbo Complete</li>
+        <li><strong>External AI:</strong> GitHub Copilot, Tabnine, Codeium, Amazon Q, Bito, Blackbox</li>
+        <li><strong>Core Features:</strong> Inline "Ghost Text" Suggestions, ML Sorting</li>
     </ul>
+    <br>
+    <p><strong>⚠️ USER RESPONSIBILITY:</strong> This plugin targets the most common AI assistants. If you have installed obscure or personal AI plugins not listed here, <strong>you are responsible for disabling them manually</strong>.</p>
+    <br>
+    <p><em>DISCLAIMER: This is a private project and is NOT officially endorsed or supported by the Technical University of Munich (TUM). The user assumes full responsibility for its usage.</em></p>
     ]]></description>
 
+    <!-- Dependencies on the platform -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">

@@ -1,50 +1,82 @@
-TUM Exam Mode Plugin
+TUM Exam Mode Plugin (Unofficial)
 
-This is an IntelliJ IDEA plugin designed for programming exams at the Technical University of Munich (TUM).
+Author: Sriyash Kommalapati
 
-Purpose
+Current Version: 1.0.4
 
-To ensure exam integrity, this plugin automatically:
+⚠️ DISCLAIMER: > This plugin is a private project developed by Sriyash Kommalapati.
 
-Disables AI Assistants (GitHub Copilot, JetBrains AI, TabNine, Amazon Q, etc.).
+It is NOT an official product of the Technical University of Munich (TUM), the PGdP Team, or the School of CIT.
 
-Disables "Full Line" Code Completion (The grey ghost text that suggests entire lines).
+The author assumes no liability for malfunctions, lost data, or issues arising from the use of this software. Use at your own risk.
 
-Warns the user if forbidden plugins were found and disabled.
+Overview
 
-Supported Exams
+This IntelliJ IDEA plugin is designed to enforce exam regulations by automatically disabling AI assistance tools. It is useful for setting up "Exam Mode" environments on student laptops or lab machines.
 
-This plugin is suitable for:
+It automatically disables:
 
-PGdP (Praktikum Grundlagen der Programmierung)
+🚫 JetBrains Full Line Code Completion (The local AI model)
 
-EIST (Einführung in die Softwaretechnik)
+🚫 GitHub Copilot & Copilot Chat
 
-And other CIT programming exams.
+🚫 JetBrains AI Assistant & Junie
 
-How to Install (For Exam Supervisors)
+🚫 Turbo Complete & ML-assisted Sorting
 
-Download the latest .zip release from the releases page.
+🚫 Inline Completion (Gray ghost text)
 
-Open IntelliJ IDEA on the exam machine.
+🚫 20+ Other AI Plugins (Bito, Tabnine, Codeium, Amazon Q, etc.)
 
-Go to Settings -> Plugins.
+⚠️ Important: Limitations & User Responsibility
 
-Click the Gear Icon ⚙️ -> Install Plugin from Disk....
+While this plugin targets the most common and popular AI assistants (over 25 known plugins), it cannot guarantee that EVERY possible AI tool is disabled.
 
-Select the tum-exam-mode-1.0.0.zip file.
+If a user has installed a niche, obscure, or brand-new AI plugin that is not on our blocklist, it is the user's sole responsibility to disable it manually. The user must ensure their environment complies with all exam regulations. This tool is a helper, not a guarantee.
 
-Restart the IDE.
+How to Build & Install (For Developers)
 
-Development
+If you have cloned this repository, follow these steps to generate the plugin file:
 
-This project is built using Gradle and Kotlin.
+1. Build the Plugin
 
-Building the Plugin
+Open a terminal inside the project folder and run:
 
-Run the following command in the terminal:
+Mac/Linux:
 
 ./gradlew buildPlugin
 
 
-The resulting plugin zip file will be located in build/distributions/.
+Windows (Command Prompt/PowerShell):
+
+gradlew buildPlugin
+
+
+2. Locate the File
+
+Once the build completes (approx. 20-60 seconds), the installable file will be located at:
+build/distributions/tum-exam-mode-1.0.4.zip
+
+3. Install in IntelliJ
+
+Open IntelliJ IDEA.
+
+Go to Settings (Mac) / File > Settings (Windows).
+
+Navigate to Plugins.
+
+Click the Gear Icon ⚙️ (top right of the panel).
+
+Select "Install Plugin from Disk...".
+
+Select the .zip file you just built.
+
+Close and Reopen the IDE.
+
+How it Works
+
+Upon startup, the plugin scans for known AI plugins (by ID) and bundled machine learning features. If found, it programmatically disables them and modifies the IDE's internal registry to prevent "ghost text" completions. A warning dialog is shown to the user if any features were disabled.
+
+License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
