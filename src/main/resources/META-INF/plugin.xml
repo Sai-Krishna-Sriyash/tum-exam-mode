@@ -19,10 +19,16 @@
     <p><em>DISCLAIMER: This is a private project and is NOT officially endorsed or supported by the Technical University of Munich (TUM). The user assumes full responsibility for its usage.</em></p>
     ]]></description>
 
-    <!-- Dependencies on the platform -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <postStartupActivity implementation="de.tum.exam.ExamModeStartupActivity"/>
+
+        <!-- NEW: Registers the Tool Window on the right sidebar -->
+        <toolWindow id="TUM Exam"
+                    secondary="false"
+                    anchor="right"
+                    icon="/META-INF/pluginIcon.svg"
+                    factoryClass="de.tum.exam.ExamModeToolWindowFactory"/>
     </extensions>
 </idea-plugin>
