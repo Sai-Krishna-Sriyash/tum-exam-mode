@@ -2,7 +2,7 @@ TUM Exam Mode Plugin (Unofficial)
 
 Author: Sriyash Kommalapati
 
-Current Version: 1.0.5
+Current Version: 1.0.6
 
 ⚠️ DISCLAIMER: > This plugin is a private project developed by Sriyash Kommalapati.
 
@@ -55,7 +55,7 @@ gradlew buildPlugin
 2. Locate the File
 
 Once the build completes (approx. 20-60 seconds), the installable file will be located at:
-build/distributions/tum-exam-mode-1.0.5.zip
+build/distributions/tum-exam-mode-1.0.6.zip
 
 3. Install in IntelliJ
 
